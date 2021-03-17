@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>My Records Details</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <a href="/">Home</a>
@@ -11,28 +13,35 @@
         <a href="/myRecords">My Records</a>
     </header>
     <main>
+        <div class="big-div">
             <div>
                 <h3>
-                     <%= data.country_name %> 
+                    <%= data.country_name %>
                 </h3>
                 <p>
-                    <b>Total Confirmed: </b> <%= data.total_confirmed %>
+                    <b>Total Confirmed: </b>
+                    <%= data.total_confirmed %>
                 </p>
                 <p>
-                    <b>Total Deaths: </b> <%= data.total_deaths %>
+                    <b>Total Deaths: </b>
+                    <%= data.total_deaths %>
                 </p>
                 <p>
-                    <b>Total Recovered: </b> <%= data.total_recovered %>
+                    <b>Total Recovered: </b>
+                    <%= data.total_recovered %>
                 </p>
                 <p>
-                    <b>Date: </b> <%= data.date %>
+                    <b>Date: </b>
+                    <%= data.date %>
                 </p>
                 <div>
                     <form action="/recordsDetails/<%= data.id %>?_method=DELETE" method="post">
                         <input type="submit" value="Delete">
                     </form>
-                </div> 
+                </div>
             </div>
+        </div>
     </main>
 </body>
+
 </html>
