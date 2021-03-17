@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All Countries</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+            <div class="big-div">
+                <% data.forEach(oneCountry => { %>
+                <div class="cards">
+                    <h3>
+                         <%= oneCountry.country_name %> 
+                    </h3>
+                    <p>
+                        Total Confirmed: <%= oneCountry.total_confirmed %>
+                    </p>
+                    <p>
+                        Total Deaths: <%= oneCountry.total_deaths %>
+                    </p>
+                    <p>
+                        Total Recovered: <%= oneCountry.total_recovered %>
+                    </p>
+                    <p>
+                        Date: <%= oneCountry.date %>
+                    </p>
+                    <div>
+                        <form action="/myRecords" method="post">
+                            <input type="hidden" name="country_name" value="<%= oneCountry.country_name %>">
+                            <input type="hidden" name="total_confirmed" value="<%= oneCountry.total_confirmed %>">
+                            <input type="hidden" name="total_deaths" value="<%= oneCountry.total_deaths %>">
+                            <input type="hidden" name="total_recovered" value="<%= oneCountry.total_recovered %>">
+                            <input type="hidden" name="date" value="<%= oneCountry.date %>">
+                            <input type="submit" value="Add to my records">
+                        </form>
+                    </div>
+                </div>
+                <% }); %> 
+            </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div>
+            <p>
+                Total Confirmed: <%= data.TotalConfirmed %> 
+            </p>
+            <p>
+                Total Deaths: <%= data.TotalDeaths %>
+            </p>
+            <p>
+                Total Recovered: <%= data.TotalRecovered %>
+            </p>
+        </div>
+        <div>
+            <form action="/getCountryResult" method="GET">
+                <input type="text" name="countryName" placeholder="Country Name"><br>
+                <label for="fromDate">From</label>
+                <input type="date" name="fromDate"><br>
+                <label for="toDate">To</label>
+                <input type="date" name="toDate"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

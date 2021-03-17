@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>One Country</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="big-div">
+            <% data.forEach(oneCountry => { %>
+                <div class="cards">
+                    <h3>
+                         <%= oneCountry.countryName %> 
+                    </h3>
+                    <p>
+                        Cases: <%= oneCountry.cases %>
+                    </p>
+                    <p>
+                        Date: <%= oneCountry.date %>
+                    </p>
+                </div>
+            <% }); %> 
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Records Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+            <div>
+                <h3>
+                     <%= data.country_name %> 
+                </h3>
+                <p>
+                    Total Confirmed: <%= data.total_confirmed %>
+                </p>
+                <p>
+                    Total Deaths: <%= data.total_deaths %>
+                </p>
+                <p>
+                    Total Recovered: <%= data.total_recovered %>
+                </p>
+                <p>
+                    Date: <%= data.date %>
+                </p>
+                <div>
+                    <form action="/recordsDetails/<%= data.id %>?_method=DELETE" method="post">
+                        <input type="submit" value="Delete">
+                    </form>
+                </div> 
+            </div>
+    </main>
+</body>
+</html>

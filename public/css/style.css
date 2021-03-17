@@ -1,0 +1,12 @@
+.big-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} 
+
+.cards {
+    background-color: grey;
+    margin: 3%;
+    border-radius: 7px;
+    padding: 1%;
+}

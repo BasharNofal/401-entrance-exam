@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Records</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <% if (data.length> 0) { %>
+            <div class="big-div">
+                <% data.forEach(oneCountry=> { %>
+
+                    <div class="cards">
+                        <h3>
+                            <%= oneCountry.country_name %>
+                        </h3>
+                        <p>
+                            Date: <%= oneCountry.date %>
+                        </p>
+                        <div>
+                            <form action="/recordsDetails/<%= oneCountry.id %>" method="get">
+                                <input type="submit" value="Details">
+                            </form>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+            <% } else { %>
+                <h1>NO AVAILABLE RECORDS</h1>
+                <% } %>
+    </main>
+</body>
+
+</html>
