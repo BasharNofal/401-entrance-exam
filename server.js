@@ -1,6 +1,7 @@
 'use strict';
 
 // including - importing libraries
+
 const express = require('express');
 const superAgent = require('superagent');
 const pg = require('pg');
@@ -8,6 +9,7 @@ const cors = require('cors');
 const methodOverride = require('method-override');
 
 // setup and configuration
+
 require('dotenv').config();
 const PORT = process.env.PORT;
 const app = express();
@@ -16,6 +18,7 @@ app.use(methodOverride('_method'));
 app.set('view engine','ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
+
 // const client = new pg.Client(process.env.DATABASE_URL); 
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } }); 
 
@@ -122,6 +125,8 @@ function AllCountriesRecords(data){
     this.total_recovered = data.TotalRecovered;
     this.date = data.Date;
 }
+
+//===============================CONNECTING DB====================================\\
 
 client.connect().then(()=>{
     app.listen(PORT,()=>{
