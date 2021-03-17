@@ -16,16 +16,16 @@
                      <%= data.country_name %> 
                 </h3>
                 <p>
-                    Total Confirmed: <%= data.total_confirmed %>
+                    <b>Total Confirmed: </b> <%= data.total_confirmed %>
                 </p>
                 <p>
-                    Total Deaths: <%= data.total_deaths %>
+                    <b>Total Deaths: </b> <%= data.total_deaths %>
                 </p>
                 <p>
-                    Total Recovered: <%= data.total_recovered %>
+                    <b>Total Recovered: </b> <%= data.total_recovered %>
                 </p>
                 <p>
-                    Date: <%= data.date %>
+                    <b>Date: </b> <%= data.date %>
                 </p>
                 <div>
                     <form action="/recordsDetails/<%= data.id %>?_method=DELETE" method="post">
