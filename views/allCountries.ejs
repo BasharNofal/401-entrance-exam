@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>All Countries</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <header>
+        <a href="/">Home</a>
+        <a href="/allCountries">All Countries</a>
+        <a href="/myRecords">My Records</a>
+    </header>
     <main>
-            <div class="big-div">
-                <% data.forEach(oneCountry => { %>
+        <div class="big-div">
+            <% data.forEach(oneCountry=> { %>
                 <div class="cards">
                     <h3>
-                         <%= oneCountry.country_name %> 
+                        <%= oneCountry.country_name %>
                     </h3>
                     <p>
                         Total Confirmed: <%= oneCountry.total_confirmed %>
@@ -35,8 +42,9 @@
                         </form>
                     </div>
                 </div>
-                <% }); %> 
-            </div>
+                <% }); %>
+        </div>
     </main>
 </body>
+
 </html>
